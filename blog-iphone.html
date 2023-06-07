@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-iphone.com</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+     #text {
+          display: block;
+        }
+      </style>
+
+      <script type="">
+
+        function hideTextAndButton() {
+          var textElement = document.getElementById("text");
+          var buttonElement = document.getElementById("hideButton");
+  
+          textElement.style.display = "none";
+          buttonElement.style.display = "none";
+        }
+      </script>
+</head>
+<body>
+    <span class="text-center offer-text" id="text"><span class="p-2 ps-lg-4 bg-warning rounded top_notification">Ask Our Executive for No Cost EMI Offer <button class="btn pe-0" id="hideButton" onclick="hideTextAndButton()"><b class="p-2 rounded-circle bg-li"><img src="public/images/close.png" class="close_btn"></b></button></span> </span>
+
+    <header class="z-3 pt-2 sticky-lg-top p-3" id="navbarr">
+        <nav class="navbar navbar-expand-lg bg-black rounded">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#">
+                    <img src="./public/images/Logo-sm.svg" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./about.html">Who we are</a>
+                        </li>     
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./offer.html">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./blog.html">Blag</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#"><span class="bi bi-telephone-inbound-fill p-2"></span>99126 99999</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">
+                                <span class=" p-2">
+                                    <button type="button" class="btn btn-primary bi bi-geo-alt-fill" data-bs-toggle="modal" data-bs-target="#cityModal" id="cityBtn">
+                                         Select City
+                                    </button>
+                                </span>
+                            </a>    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+    </header>
+
+    <section>
+        <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header row">
+                        <h5 class="modal-title col-11 m-auto text-center" id="cityModalLabel">Select City</h5>
+                        <button type="button" class="btn-close col-1 p-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row" id="mainCityRow">
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action"  data-city="Hyderabad">
+                                                <img class="rounded-circle m-auto" src="./public/images/hyderabad.svg" width="90" height="100" alt=""><br>
+                                                <b class="text-center">Hyderabad</b>
+                                           </button>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action"  data-city="Bengaluru">
+                                                <img class="rounded-circle" src="./public/images/Bengaluru.svg" width="90" height="100" alt=""><br>
+                                                <b class="text-center">Bengaluru</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action"  data-city="Mumbai">
+                                                <img class="rounded-circle p-1" src="./public/images/Mumbai.svg" width="90" height="100" alt=""><br>
+                                                <b class="text-center">Mumbai</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action"  data-city="Delhi">
+                                                <img class="rounded-circle p-1" src="./public/images/Delhi.svg" width="90" height="100" alt=""><br>
+                                                <b class="text-center">Delhi</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action"  data-city="Chennai">
+                                                <img class="rounded-circle p-1" src="./public/images/Chennai.svg" width="90" height="100" alt=""><br>
+                                                <b class="text-center">Chennai</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action"  data-city="Kolkata">
+                                                <img class="rounded-circle p-1" src="./public/images/Kolkata.svg" width="90" height="100" alt=""><br>
+                                                <b class="text-center">Kolkata</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <h6 class="text-center">Other Cities</h6>
+                                        <div class="row" id="allCityRow">
+                                            <div class="col-12">                                               
+                                                <div class="list-group">
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Ahmedabad">Ahmedabad</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Bhopal">Bhopal</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Chandigarh">Chandigarh</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Chittoor">Chittoor</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Faridabad">Faridabad</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Gandhinagar">Gandhinagar</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Gurgaon">Gurgaon</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Jaipur">Jaipur</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Kadapa">Kadapa</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Lucknow">Lucknow</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Nagpur">Nagpur</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Gurgaon">Gurgaon</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Noida">Noida</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Pune">Pune</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Tirupati">Tirupati</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Vizag">Vizag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container text-center">
+        <h2 class="p-lg-4">Fastest iPhone Repair Service at Doorstep, Lifetime Warranty, EMI Available.</h2>
+    </div>
+
+    <section class="container">
+        <div class="row row-cols-lg-2 row-cols-md-3 g-5 p-lg-4 ">
+            <div class="col-lg-6">
+                <div class="card p-lg-4">
+                    <a href="./blog-ipad.html">
+                        <img src="./public/images/mobile.png" class="card-img-top" alt="i Tab">
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">iPad Repair Service at Doorstep</h5>
+                        <p class="">October 12, 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <p>We at <a class="text-decoration-none" href="./index.html">GadgetZippy</a> Provide you with latest lowest price and offers along with a warranty of Lifetime. In case you are looking for your iPhone screen replacement in India, we can help.</p>
+                </div>
+                <div>
+                    <p>Get your free quote for iPhone Screen Repair/Replacement <a class="text-decoration-none" href="./index.html">Free Quote</a></p>
+                </div>
+                <div>
+                    <p>or reach us at 99126-99999 for Immediate Response.</p>
+                </div>
+                <div>
+                    <p>You could also follow us on <a class="text-decoration-none" href="https://www.instagram.com/gadgetzippy/">Instagram</a> to be updated on the latest Offers</p>
+                </div>
+                <div>
+                    <ul>
+                        <li>Fastest iPhone Repair Service in 19+ Cities Across India at your Doorstep! <a class="text-decoration-none" href="./index.html">GadgetZippy</a></li>
+                        <li>Lowest Price & Lifetime Warranty on iPhone Screen Repair & Replacement at your Doorstep in 20 Mins.</li>
+                        <li>No-Cost EMI Available for your convenience.</li>
+                        <li>Apple iPhone Repair Service Spread Across 19+ Cities in India.</li>
+                        <li>Highest Rated on Google, Check our <a class="text-decoration-none" href="https://www.google.com/search?q=gadgetzippy+reviews&rlz=1C1UEAD_enIN961IN961&oq=gadgetzippy+reviews&aqs=chrome..69i57.9777j0j1&sourceid=chrome&ie=UTF-8#lrd=0x3bcb9737e5582977:0xb6cc4fe292539a0e,1,,,">GadgetZippy Reviews</a></li>
+                        <li>Looking forward to providing you the best service available for <a class="text-decoration-none" href="./index.html">iPhone Repair at Doorstep</a></li>
+                    </ul>
+                </div>
+                <div>
+                
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid text-center p-5">
+        <div class="">
+            <a href="http://www.facebook.com" class="btn btn-primary mb-2"><span class="bi bi-facebook p-2"></span>Facebook</a>
+            <a href="http://www.messenger.com" class="btn btn-info mb-2" ><span class="bi bi-chat-dots-fill p-2"></span>Messenger</a>
+            <a href="http://www.twitter.com" class="btn btn-primary mb-2"><span class="bi bi-twitter p-2"></span>Twitter</a>
+            <a href="http://www.whatsapp.com" class="btn btn-success mb-2"><span class="bi bi-whatsapp p-2"></span>Whatsapp</a>
+            <a href="http://www.email.com" class="btn btn-secondary mb-2"><span class="bi bi-envelope p-2"></span>Email</a>
+        </div>
+    </section>
+
+<!-- map start -->
+
+    <section class="container-fluid">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d34896.72365053651!2d78.45463555269201!3d17.415101039808334!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9737e5582977%3A0xb6cc4fe292539a0e!2sGadgetZippy.com!5e0!3m2!1sen!2sin!4v1685735068900!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+    </section>
+
+<!-- map end -->
+
+    <footer class="p-3 pb-0 ">
+        <div class="container-fluid p-4 rounded bg-black">
+            <div class="row g-4 p-lg-4 m-auto" id="footer-color">
+                <div class="col-lg-6 col-sm-6 col-12">
+                    <h4 class="text-white pb-3">Contact us</h4>
+                    <h1>
+                        <img src="./public/images/Logo-sm.svg" alt="logo">
+                    </h1>
+                    <p><a href="#">Repair@Gadgetzippy.com</a></p>
+                    <p><a href="#">+91 99126 99999</a></p>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <h4 class="text-white pb-3">Quick links</h4>
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#">Who we are</a></p>
+                    <p><a href="#">Offers</a></p>
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="./faq.html">FAQ</a></p>
+                    <p><a href="">Privacy</a></p>
+    
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <h4 class="text-white pb-3">Follow us</h4>
+                    <p>
+                    <a href="#"><img src="public/images/facebook.svg"></a>
+                    <a href="#"><img src="public/images/instagram.svg"></a>
+                    <a href="#"><img src="public/images/twitter.svg"></a>
+                    <a href="#"><img src="public/images/whatsapp.svg"></a>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row border-top border-secondary">
+                <div class="col-12 pt-3 text-center">
+                    <p class="text-white mb-0">© 2023 GadgetZippy, All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+          $('#mainCityRow .list-group-item').click(function() {
+            var selectedCity = $(this).data('city');
+            if (selectedCity) {
+              $('#cityBtn').text(selectedCity);
+              $('#cityModal').modal('hide');
+            }
+          });
+    
+          $('#allCityRow .list-group-item').click(function() {
+            var selectedCity = $(this).data('city');
+            if (selectedCity) {
+              $('#cityBtn').text(selectedCity);
+              $('#cityModal').modal('hide');
+            }
+          });
+        });
+      </script>
+
+</body>
+</html>

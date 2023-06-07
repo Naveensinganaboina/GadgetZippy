@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index.com</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script type="">
+        function hideTextAndButton() {
+            var textElement = document.getElementById("text");
+            var buttonElement = document.getElementById("hideButton");
+            textElement.style.display = "none";
+            buttonElement.style.display = "none";
+        }
+    </script>
+
+    <script>
+    window.onload = function() {
+        var layoutSection = document.querySelector('.layout-bg');
+        var defaultImageUrl = './public/images/iPhone-home.png';
+        layoutSection.style.backgroundImage = "url('" + defaultImageUrl + "')";
+    }
+    function changeImage(imageUrl) {
+        var layoutSection = document.querySelector('.layout-bg');
+        layoutSection.style.backgroundImage = "url('" + imageUrl + "')";
+    }
+    function shakeButton(button) {
+        button.classList.add('shake');
+        setTimeout(function() {
+        button.classList.remove('shake');
+    }, 1000);
+    }
+    </script>
+      
+</head>
+<body>
+<section class="layout-bg">
+    <span class="text-center offer-text" id="text" ><span class="p-2 ps-lg-4 bg-warning rounded top_notification px-0">Ask Our Executive for No Cost EMI Offer <button class="btn pe-0" id="hideButton" onclick="hideTextAndButton()"><b class="p-2 rounded-circle bg-li"><img src="public/images/close.png" class="close_btn"></b></button></span> </span>
+
+
+    <header class="z-999 pt-2 sticky-lg-top p-3" id="navbarr">
+        <nav class="navbar navbar-expand-lg bg-black rounded">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="./index.html">
+                    <img src="./public/images/Logo-sm.svg" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./about.html">Who we are</a>
+                        </li>     
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./offer.html">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./blog.html">Blag</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#"><span class="bi bi-telephone-inbound-fill p-2"></span>99126 99999</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">
+                                <span class=" p-2">
+                                    <button type="button" class="btn btn-primary bi bi-geo-alt-fill" data-bs-toggle="modal" data-bs-target="#cityModal" id="cityBtn">
+                                         Select City
+                                    </button>
+                                </span>
+                            </a>    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
+    </header>
+    
+
+    <div>
+        <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header row">
+                        <h5 class="modal-title col-11 m-auto text-center" id="cityModalLabel">Select City</h5>
+                        <button type="button" class="btn-close col-1 p-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row" id="mainCityRow">
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center m-auto">
+                                            <button type="button" class="list-group-item list-group-item-action ps-lg-1 pe-lg-1 p-2 rounded"  data-city="Hyderabad">
+                                                <img class="rounded-circle m-auto" src="./public/images/hyderabad.svg" width="80" height="90" alt=""><br>
+                                                <b class="text-center">Hyderabad</b>
+                                           </button>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action ps-lg-1 pe-lg-1 p-lg-2 rounded"  data-city="Bengaluru">
+                                                <img class="rounded-circle" src="./public/images/Bengaluru.svg" width="80" height="90" alt=""><br>
+                                                <b class="text-center">Bengaluru</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action p-lg-2 rounded"  data-city="Mumbai">
+                                                <img class="rounded-circle p-1" src="./public/images/Mumbai.svg" width="80" height="90" alt=""><br>
+                                                <b class="text-center">Mumbai</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action p-lg-2 rounded"  data-city="Delhi">
+                                                <img class="rounded-circle p-1" src="./public/images/Delhi.svg" width="80" height="90" alt=""><br>
+                                                <b class="text-center">Delhi</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action p-lg-2 rounded"  data-city="Chennai">
+                                                <img class="rounded-circle p-1" src="./public/images/Chennai.svg" width="80" height="90" alt=""><br>
+                                                <b class="text-center">Chennai</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6">
+                                        <div class="text-center">
+                                            <button type="button" class="list-group-item list-group-item-action p-lg-2 rounded"  data-city="Kolkata">
+                                                <img class="rounded-circle p-1" src="./public/images/Kolkata.svg" width="80" height="90" alt=""><br>
+                                                <b class="text-center">Kolkata</b>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <h3 class="text-center">Other Cities</h3>
+                                        <div class="row" id="allCityRow">
+                                            <div class="col-12">                                               
+                                                <div class="list-group">
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Ahmedabad">Ahmedabad</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Bhopal">Bhopal</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Chandigarh">Chandigarh</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Chittoor">Chittoor</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Faridabad">Faridabad</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Gandhinagar">Gandhinagar</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Gurgaon">Gurgaon</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Jaipur">Jaipur</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Kadapa">Kadapa</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Lucknow">Lucknow</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Nagpur">Nagpur</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Gurgaon">Gurgaon</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Noida">Noida</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Pune">Pune</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Tirupati">Tirupati</button>
+                                                    <button type="button" class="list-group-item list-group-item-action" data-city="Vizag">Vizag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-3">
+        <div class="row text-center">
+            <div class="col-lg-6 col-sm-12 col-8  ">
+    
+            </div>
+            <div class="col-lg-6 col-sm-12 col-12 pt-lg-3 pt-3 pb-5">
+                <div class="pt-lg-5 select-device pb-5" >
+                    <b class="rounded p-2 px-4 bg-body-tertiary" >Select your device to get started now!</b>
+                </div>
+                <div class="pt-lg-0 pt-sm-0 pt-5">
+                    <div class="pt-lg-3 pt-5">
+                        <button class="btn btn-primary w-25 p-lg-3"  onclick="changeImage('./public/images/iWatch-home.png'); shakeButton(this)">
+                            <span class="bi bi-apple"></span>IWatch
+                        </button>
+                        <button class="btn btn-primary w-25 p-lg-3" onclick="changeImage('./public/images/iPhone-home.png'); shakeButton(this)">
+                            <span class="bi bi-apple"></span>Imobile
+                        </button>
+                        <br>
+                        <button class="btn btn-primary w-25 p-lg-3 mt-3" onclick="changeImage('./public/images/iPad-home.png'); shakeButton(this)">
+                            <span class="bi bi-apple">Ipads&nbsp;&nbsp;&nbsp;</span>   
+                        </button>
+                        <button class="btn btn-primary w-25 p-lg-3 mt-3" onclick="changeImage('./public/images/iMacbook-home.png'); shakeButton(this)">
+                            <span class="bi bi-apple"></span>IMacbook
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="pt-lg-0 pt-3 text-lg-center text-sm-end">
+                <h5 style="color: #939393;">Lifetime Warranty • Lowest Price</h5>
+                <div>
+                    <h3>India's Highest Rated <b>Apple</b> <br> <b>Repairs</b> at your <b>doorstep</b></h3>
+                </div>
+                <div>
+                    <h5>PROFESSIONAL APPLE TECHNICIANS</h5>
+                </div>
+                <div>
+                    <h6>Most trusted iPhone, iPad, iWatch & MacBook repair service in Hyderabad</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section> 
+      
+    <section class="container-fluid p-lg-2">
+        <div class="p-lg-2 text-center" style="background-color: #FCC853;">
+            <h2 class="p-lg-4 p-3">How does it work?</h2>
+            <div class="row p-lg-5 p-3">
+                <div class="col-lg-4 col-sm-4 col-12">
+                    <img src="./public/images/select-issue.svg" alt="">
+                    <h3>Select your device & issue</h3>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-12">
+                    <img src="./public/images/Chat.svg" alt="">
+                    <h3>Get a FREE quote instantly</h3>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-12">
+                    <img src="./public/images/Technician.svg" alt="">
+                    <h3>Technician visits you to fix device in no time</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="">
+        <div class="container">
+            <div class="text-center p-5">
+                <h2>Why GadgetZippy is your trusted partner</h2>
+            </div>
+            <div class="row justify-content-center p-lg-3">
+                <div class="col-md-6 col-lg-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="./public/images/lifetime-warranty.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3 img-rotate">
+                        <div>
+                            <h4>Lifetime Warranty</h4>
+                            <small>Our commitment to customer satisfaction is exemplified by our Lifetime Warranty, giving you the confidence that your device is in reliable hands.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="./public/images/repairs-infront.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
+                        <div>
+                            <h4>Repairs Done, Right In Front Of You!</h4>
+                            <small>We bring the repair service directly to you, ensuring that your device is fixed professionally and efficiently, right in front of your doorstep.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="./public/images/door-repair.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
+                        <div>
+                            <h4>Same Day Doorstep Service</h4>
+                            <small>Enjoy the convenience of our same day doorstep service, eliminating the need for you to wait or travel. Your device will be fixed without interrupting your busy schedule.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="./public/images/google-ratings.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
+                        <div>
+                            <h4>Highest Google Ratings</h4>
+                            <small>We take pride in our exceptional service, as reflected in our highest Google ratings. Our satisfied customers consistently rate us as the best in the industry</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="./public/images/lowest-prices.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
+                        <div>
+                            <h4>Lowest Prices</h4>
+                            <small>At GadgetZippy, save big with our lowest prices guarantee. We believe in providing affordable solutions without compromising on the quality of our services.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="./public/images/expert-tech.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
+                        <div>
+                            <h4>Expert Technicians</h4>
+                            <small>Our team of highly skilled and experienced technicians are the backbone of our service. Rest assured, your devices are in the hands of experts.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container p-lg-4">  
+
+        <div class="carousel slide carousel-dark" id="banner" data-bs-ride="carousel">
+            <div class="carousel-inner text-center pb-lg-5 pb-3">
+                <div class="carousel-item active text-center" data-bs-interval="1000">
+                    <img src="./public/images/male.png" class="">
+                    <h5>SAMARTH BAJAJ</h5>
+                    <p>My iPhone 11 Pro Screen Was Fixed in 20 Mins at my House. Excellent Service! Highly Recommended.</p>
+                </div>
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="./public/images/female.png" class="">
+                    <h5 class="pb-3 pb-sm-0 pb-lg-0">ANJORI  GROVER VASESI</h5>
+                    <p class="pb-2 pb-sm-0 pb-lg-0">Got my iPad Display Replaced in Front of me at Office, Best & Trustworthy Service at Doorstep.</p>
+                </div>
+                <div class="carousel-item h-100" data-bs-interval="1000">
+                    <img src="./public/images/slider12.png" class="">
+                    <h5>REVANT SHARMA</h5>
+                    <p>Extremely Professional Work Done in Replacing my iPhone XS Max Back Glass the Same Day in Couple of hours. Very Convenient.</p>
+                </div>
+            </div>
+            <!-- <button data-bs-slide="prev" data-bs-target="#banner" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-slide="next" data-bs-target="#banner" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </button> -->
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#banner"></button>
+                <button data-bs-slide-to="1" data-bs-target="#banner"></button>
+                <button data-bs-slide-to="2" data-bs-target="#banner"></button>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container pb-sm-3">
+            <div class="row">
+                <div class="col-8 rounded bg-yellow m-auto p-5">
+                    <div class="row text-center">
+                        <div class="col-lg-4 col-sm-12">
+                            <div>CITIES <br>SERVICED</div>
+                            <h1 class="h1"><span id="cities">0</span>+</h1>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <div>DEVICES<br> REPAIRED</div>
+                            <h1 class="h1"><span id="devices">0</span>+</h1>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <div>GOOGLE <br>RATINGS</div>
+                            <h1 class="h1"><span id="ratings" >0</span>/5</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="p-lg-5 p-sm-2">
+        <div class="p-lg-5">
+            <div class="p-3">
+                <h2 class="text-center" data-aos="slide-right"  data-aos-duration="1000">Frequently Asked Questions</h2>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <b>How does GadgetZippy.com work?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">   
+                            Place a service request through our website - GadgetZippy.com or Call/Whatsapp us at directly at +91 99126-99999. We visit you, diagnose it & fix it, all at your location on the same day for almost all the devices, for others we offer free pick up & drop within few hours.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           <b> What are the cities GadgetZippy.com operates in?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Currently we operate in Hyderabad, Bangalore, Mumbai , Pune, Chennai, Kolkata, Ahmedabad, Gandhinagar, Delhi-NCR, Nagpur, Vizag, Jaipur, Chandigarh, Tirupati, Chittoor & Kadapa. We will be in other cities soon.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <b>How do I place a service request at GadgetZippy.com?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            You can create a service request through the following: Visit our website – GadgetZippy.com, select your Device, issue and you will receive a quote over Call/Whatsapp from +91 99126-99999.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            <b>How much does GadgetZippy.com charge for its repair service?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Place a service request through the Repairs section or WhatsApp us at +91 9912 6999 99. We visit you, diagnose it & fix it, all at your location on the same day.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            <b>How much does GadgetZippy.com charge for its repair service?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            GadgetZippy.com charges Rs. 499/- for diagnosis. In case of additional services not mentioned before, a new quote will be provided by our Sales team from the contact number +91 99126-99999. Our Technicians do not have the authority to provide any kind of quotation.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                             <b>What time does it take for Apple Device to be repaired?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Place a service request through the Repairs section or WhatsApp us at +91 9912 6999 99. We visit you, diagnose it & fix it, all at your location on the same day.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+                            <b>Is there a warranty on the repair service undertaken by GadgetZippy.com?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            All of GadgetZippy.com services provided at your location will take less than 20 minutes from the time of our technicians arrival.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+                           <b> How safe is my iPhone/iPad/iWatch/MacBook with GadgetZippy.com?</b>
+                        </button>
+                    </h2>
+                  <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            GadgetZippy.com provides repair services at your location for almost all Apple Devices. However please note physical damage to screen often results damage to other components (sensor, motherboard, etc.) and GadgetZippy.com won’t be held responsible for issues which are discovered during the process of repair. Repair/diagnosis of device might result in minor wear & tear, hence the device might not be returned in as-is state.
+                        </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNighin" aria-expanded="false" aria-controls="collapseThree">
+                            <b>Is there a warranty on the repair service undertaken by GadgetZippy.com ?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseNighin" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes, for more details Call/Whatsapp us on +91 99126-99999.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
+                           <b> Is GadgetZippy.com authorized service center?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            GadgetZippy.com is an independent operation where Devices are repaired by experienced Apple professionals and is not an Apple authorized service center.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
+                            <b>What about the data on my Device?</b>
+                        </button>
+                    </h2>
+                    <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            While we take utmost care in ensuring there is no data loss, repair of iPhone/iPad/Mac might entail formatting of device and the company will not be responsible for the loss of saved data/contact information. Please take appropriate data backup before submitting your device.
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </section>
+
+<!-- map start -->
+
+    <section class="container-fluid">
+        <div class="p-3">
+            <h2 class="text-center" data-aos="slide-right" data-aos-duration="1000">CONTACT US</h2>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d34896.72365053651!2d78.45463555269201!3d17.415101039808334!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9737e5582977%3A0xb6cc4fe292539a0e!2sGadgetZippy.com!5e0!3m2!1sen!2sin!4v1685735068900!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+    </section>
+
+<!-- map end -->
+
+      <footer class="p-3 pb-0 ">
+        <div class="container-fluid p-4 rounded bg-black">
+            <div class="row g-4 p-lg-4 m-auto" id="footer-color">
+                <div class="col-lg-6 col-sm-6 col-12">
+                    <h4 class="text-white pb-3">Contact us</h4>
+                    <h1><img src="./public/images/Logo-sm.svg" alt="logo"></h1>
+                    <p><a href="#">Repair@Gadgetzippy.com</a></p>
+                    <p><a href="#">+91 99126 99999</a></p>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <h4 class="text-white pb-3">Quick links</h4>
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#">Who we are</a></p>
+                    <p><a href="#">Offers</a></p>
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="./faq.html">FAQ</a></p>
+                    <p><a href="">Privacy</a></p>
+    
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <h4 class="text-white pb-3">Follow us</h4>
+                    <p>
+                    <a href="#"><img src="public/images/facebook.svg"></a>
+                    <a href="#"><img src="public/images/instagram.svg"></a>
+                    <a href="#"><img src="public/images/twitter.svg"></a>
+                    <a href="#"><img src="public/images/whatsapp.svg"></a>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row border-top border-secondary">
+                <div class="col-12 pt-3 text-center">
+                    <p class="text-white mb-0" >© 2023 GadgetZippy, All rights reserved</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="text-end position-sticky z-3 ">
+                    <a href="#text">
+                        <span class="bi bi-arrow-up rounded rounded-circle"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script>
+        function showSubButtons(buttonNumber) {
+          var subButtons = document.querySelectorAll('.subButton');
+          subButtons.forEach(function(subButton) {
+            subButton.style.display = 'none';
+          });
+    
+          var buttonId = 'subButton' + buttonNumber;
+          var button = document.getElementById(buttonId);
+          button.style.display = 'block';
+        }
+    
+        function toggleDropdown(buttonNumber, subButtonNumber) {
+          var dropdowns = document.querySelectorAll('.dropdown');
+          dropdowns.forEach(function(dropdown) {
+            dropdown.style.display = 'none';
+          });
+    
+          var dropdownId = 'subButton' + buttonNumber;
+          var dropdown = document.getElementById(dropdownId).querySelectorAll('.dropdown')[subButtonNumber - 1];
+          dropdown.style.display = 'block';
+        }
+    
+        function toggleMobileInput(buttonNumber, subButtonNumber) {
+          var mobileInputs = document.querySelectorAll('.mobileInput');
+          mobileInputs.forEach(function(input) {
+            input.style.display = 'none';
+          });
+    
+          var inputId = 'mobileInput' + buttonNumber + '-' + subButtonNumber;
+          var input = document.getElementById(inputId);
+          input.style.display = 'block';
+        }
+      </script>
+
+    <script>
+        $(document).ready(function() {
+          $('#mainCityRow .list-group-item').click(function() {
+            var selectedCity = $(this).data('city');
+            if (selectedCity) {
+              $('#cityBtn').text(selectedCity);
+              $('#cityModal').modal('hide');
+            }
+          });
+    
+          $('#allCityRow .list-group-item').click(function() {
+            var selectedCity = $(this).data('city');
+            if (selectedCity) {
+              $('#cityBtn').text(selectedCity);
+              $('#cityModal').modal('hide');
+            }
+          });
+        });
+      </script>
+
+    <script>
+        var testimonialSlider = new bootstrap.Carousel(document.getElementById('testimonialSlider'), {
+          interval: 3000, // 3 seconds interval for auto slide
+          pause: 'hover', // pause on mouse hover
+          wrap: true // continuous looping
+        });
+      
+        var dotsContainer = document.querySelector('.slider-dots');
+      
+        // Create the slider dots dynamically based on the number of testimonials
+        for (var i = 0; i < testimonialSlider.getInnerElements().length; i++) {
+          var dot = document.createElement('span');
+          dot.classList.add('dot');
+          if (i === 0) {
+            dot.classList.add('active');
+          }
+          dotsContainer.appendChild(dot);
+        }
+      
+        // Update slider dots on slide change
+        testimonialSlider.addEventListener('slid.bs.carousel', function () {
+          var activeDot = document.querySelector('.slider-dots .dot.active');
+          activeDot.classList.remove('active');
+          var newActiveDot = document.querySelector('.slider-dots .dot:nth-child(' + (testimonialSlider.getActiveIndex() + 1) + ')');
+          newActiveDot.classList.add('active');
+        });
+      
+        // Change slide on mouse move
+        document.getElementById('testimonialSlider').addEventListener('mousemove', function (event) {
+          if (event.movementX > 0) {
+            testimonialSlider.next();
+          } else if (event.movementX < 0) {
+            testimonialSlider.prev();
+          }
+        });
+    </script>
+
+
+    <script>
+        function animateCounter(elementId, startValue, endValue, duration) {
+            const element = document.getElementById(elementId);
+            const range = endValue - startValue;
+            const increment = range / (duration / 1000); // Calculate increment per second
+            let currentValue = startValue;
+            const endTime = Date.now() + duration;
+            const timer = setInterval(() => {
+                const timeLeft = Math.max(endTime - Date.now(), 0);
+                currentValue = startValue + increment * (1 - timeLeft / duration);
+                element.innerHTML = Math.floor(currentValue); // Round down to integer value
+                if (currentValue >= endValue || timeLeft === 0) {
+                    element.innerHTML = endValue; // Set the final value
+                    clearInterval(timer);
+                }
+            }, 10); // Interval of 10ms for smooth animation
+        }
+
+        animateCounter("cities", 0, 19, 3000); // Animate cities serviced from 0 to 19 in 3 seconds
+        animateCounter("devices", 0, 4000000, 3000); // Animate devices repaired from 0 to 4,000,000 in 3 seconds
+        animateCounter("ratings", 0, 4.7, 3000); // Animate Google ratings from 0 to 4.7 in 3 seconds
+    </script>
+
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,227 @@
+*{
+    font-family: "Fira Sans", sans-serif;
+}
+
+/* testimonials */
+.testimonial {
+    text-align: center;
+    margin-top: 50px;
+}
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.testimonial .quote {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.testimonial .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+}
+.slider-dots {
+    margin-top: 20px;
+    text-align: center;
+}
+.slider-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.slider-dots .dot.active {
+    background-color: #333;
+}
+/* testimonials */
+#text {
+    display: block;
+ }
+ /* Defines the width of the carousel and centers it on the page */
+.lick-carousel {
+    margin: 0 auto;
+    width: 350px;
+}
+/* The width of each slide */
+.slick-slide {
+    width: 350px;
+}
+/* Color of the arrows */
+.slick-next::before, .slick-prev::before {
+    color: blue;
+}
+
+.close_btn {
+    width: 20px;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 8px;
+    background: #9e9e9e33;
+    border-radius: 100%;
+    margin-top: -4px;
+}
+
+.bg-yellow{
+    background-color: #FCC853;
+}
+#footer-color div a{
+    text-decoration: none;   
+}
+#footer-color div a:hover{
+    color: #FCC853;
+}
+.h1{
+    font-weight: bold !important;
+    /* font-size: 3rem !important; */
+    padding-top: 10px;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#mainCityRow div button:hover{
+    background: #FCC853;
+}
+@media only screen and (max-width: 384px) {
+    .top_notification{
+        font-size: 13px;
+    }
+}
+
+ /* Additional CSS styles for enhanced appearance */
+ .feature-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  .feature-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.8);
+  }
+
+
+  .naveen a img{
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .naveen a img{
+    transition: transform 0.3s ease;
+  }
+  
+  .naveen a:hover img {
+    transform: scale(1.1);
+  }
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+
+  .shake {
+    animation: shake 0.4s;
+  }
+  .layout-bg {
+    background-image: url('./public/images/default.jpg');
+    background-repeat: no-repeat;
+   
+  }
+
+
+  .button {
+    margin-bottom: 10px;
+  }
+  .subButton {
+    display: none;
+  }
+  .dropdown {
+    display: none;
+  }
+  .mobileInput {
+    display: none;
+  }
+  .offer-id{
+    animation: scroll;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+
+  @keyframes scroll{
+    from{
+        transform: translateX(-400px);
+    }
+
+    to {
+        transform: translateX(0px);
+        color: red;
+    }
+    0%{
+        color: green;
+    }
+
+  }
+
+  .offer-text{
+
+    animation-name: text;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+  }
+  @keyframes text{
+    from{
+        transform: translateX(-20px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+  }
+
+  .select-device{
+    animation-name: here;
+    animation-duration: 1s;
+    animation-delay: 0s;
+  }
+  @keyframes here{
+    from{
+        transform: translateX(140px);
+    }
+    to {
+        transform: translateX(-100px);
+    }
+  }
+
+  .zoomhover{
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    
+  }
+  .zoomhover img{
+    
+    display: block;
+    transition: transfrom 1s;
+    opacity: .8;
+  }
+  .zoomhover:hover img{
+    transform: scale(1.03);
+    opacity: 1;
+  }

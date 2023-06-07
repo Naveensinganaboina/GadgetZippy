@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101.639" height="101.639" viewBox="0 0 101.639 101.639">
+  <g id="Group_9699" data-name="Group 9699" transform="translate(-105.387 -1445.719)">
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="50.819" cy="50.819" r="50.819" transform="translate(105.387 1445.719)" fill="#ffcb57"/>
+    <g id="Door" transform="translate(-638 132)">
+      <path id="Subtraction_3" data-name="Subtraction 3" d="M-17191.041,297.209H-17221V241h29.961Zm-3.441-29.389a1.16,1.16,0,0,0-1.154,1.163,1.162,1.162,0,0,0,1.154,1.167,1.162,1.162,0,0,0,1.154-1.167A1.16,1.16,0,0,0-17194.482,267.82Zm-14.807-18.705a.283.283,0,0,0-.207.1.271.271,0,0,0-.068.216l.842,9.076a.277.277,0,0,0,.277.255h1.426l.541,7.114a.279.279,0,0,0,.236.259.166.166,0,0,0,.043,0,.274.274,0,0,0,.26-.182l3.934-10.213a.292.292,0,0,0-.031-.259.277.277,0,0,0-.232-.125h-2.373l2.627-5.839a.3.3,0,0,0-.016-.272.285.285,0,0,0-.238-.13Z" transform="translate(18000.021 1095.998)" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="Rectangle_3456" data-name="Rectangle 3456" width="66" height="66" transform="translate(761 1332)" fill="none"/>
+    </g>
+  </g>
+</svg>
