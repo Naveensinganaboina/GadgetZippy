@@ -199,20 +199,105 @@
                 </div>
                 <div class="pt-lg-0 pt-sm-0 pt-5">
                     <div class="pt-lg-3 pt-5">
-                        <button class="btn btn-primary w-25 p-lg-3 p-1 okay-ease"  onclick="changeImage('./public/images/iWatch-home.png'); shakeButton(this)">
+                        <button class="btn btn-primary w-25 p-lg-3 p-1 okay-ease" onclick="changeImage('./public/images/iWatch-home.png'), showSubButtons(1); shakeButton(this)">
                             <span class="bi bi-apple"></span>IWatch
                         </button>
-                        <button class="btn btn-primary w-25 p-lg-3 p-1" onclick="changeImage('./public/images/iPhone-home.png'); shakeButton(this)">
+                        <button class="btn btn-primary w-25 p-lg-3 p-1" onclick="changeImage('./public/images/iPhone-home.png'), showSubButtons(2); shakeButton(this)">
                             <span class="bi bi-apple"></span>Imobile
                         </button>
                         <br>
-                        <button class="btn btn-primary w-25 p-lg-3 mt-3 p-1" onclick="changeImage('./public/images/iPad-home.png'); shakeButton(this)">
+                        <button class="btn btn-primary w-25 p-lg-3 mt-3 p-1" onclick="changeImage('./public/images/iPad-home.png'), showSubButtons(3); shakeButton(this)">
                             <span class="bi bi-apple">Ipads&nbsp;&nbsp;&nbsp;</span>   
                         </button>
-                        <button class="btn btn-primary w-25 p-lg-3 mt-3 p-0" onclick="changeImage('./public/images/iMacbook-home.png'); shakeButton(this)">
+                        <button class="btn btn-primary w-25 p-lg-3 mt-3 p-0" onclick="changeImage('./public/images/iMacbook-home.png'), showSubButtons(4); shakeButton(this)">
                             <span class="bi bi-apple"></span>IMacbook
                         </button>
                     </div>
+                    <div id="subButtonContainer">
+                        <div class="subButton" id="subButton1">
+                          <button class="dropdownButton btn btn-danger" onclick="toggleDropdown(1, 1)">Select I-Watch</button>
+                          <select class="dropdown btn btn-info" onchange="toggleMobileInput(1, 1)">
+                            <option value="" class="btn btn-info">Select I-Watch</option>
+                            <option value="option1">Apple Watch Series 8</option>
+                            <option value="option2">Apple Watch Series Ultra</option>
+                            <option value="option3">Apple Watch Series 7</option>
+                            <option value="option4">Apple Watch Series 6</option>
+                            <option value="option5">Apple Watch SE</option>
+                            <option value="option6">Apple Watch Series 5</option>
+                            <option value="option7">Apple Watch Series 4</option>
+                            <option value="option8">Apple Watch Series 3</option>
+                            <option value="option9">Apple Watch Series 2</option>
+                            <option value="option10">Apple Watch Series 1</option>
+                          </select>
+                          <input class="mobileInput" id="mobileInput1-1" type="text" placeholder="Enter mobile number">
+                        </div>
+                        <!-- Add 5 more sub_buttons for Button 1 -->
+                        <div class="subButton" id="subButton2">
+                          <button class="dropdownButton btn btn-danger" onclick="toggleDropdown(2, 1)">Select I-Mobile</button>
+                          <select class="dropdown btn btn-info" class="align-content-end" onchange="toggleMobileInput(2, 1)">
+                            <option value="" class=" btn btn-info">Select I-Mobile</option>
+                            <option value="option1"> iPhone 14 Pro Max</option>
+                            <option value="option2">iPhone 14 Pro</option>
+                            <option value="option3">iPhone 14 Plus</option>
+                            <option value="option4">iPhone 14</option>
+                            <option value="option5">iPhone 13 Pro Max</option>
+                            <option value="option6">iPhone 13 Pro</option>
+                            <option value="option7">iPhone 13</option>
+                            <option value="option8">iPhone 13 Mini</option>
+                            <option value="option9">OptiPhone 12 Pro Maxion</option>
+                            <option value="option10">iPhone 12 Pro</option>
+                            <option value="option11">iPhone 12</option>
+                            <option value="option12">iPhone 12 Mini</option>
+                            <option value="option13">iPhone SE (2020)</option>
+                            <option value="option14">iPhone 11 Pro Max</option>
+                            <option value="option15">iPhone 11 Pro</option>
+                            <option value="option16">iPhone 11</option>
+                            <option value="option17">iPhone XS Max</option>
+                            <option value="option18">iPhone XS</option>
+                            <option value="option19">iPhone XR</option>
+                            <option value="option20">iPhone X</option>
+                            <option value="option21">iPhone 8 Plus</option>
+                            <option value="option22">iPhone 8</option>
+                            <option value="option23">iPhone 7 Plus</option>
+                            <option value="option24">iPhone 7</option>
+                            <option value="option25">iPhone 6s Plus</option>
+                            <option value="option26">iPhone 6s</option>
+                            <option value="option27">iPhone 6 Plus</option>
+                            <option value="option28">iPhone 6</option>
+                            <option value="option29">iPhone SE</option>
+                            <option value="option30">iPhone 5s</option>
+                            <option value="option31">iPhone 5c</option>
+                            <option value="option32">selected-markiPhone 5</option>
+                          </select>
+                          <input class="mobileInput" id="mobileInput2-1" type="text" placeholder="Enter mobile number">
+                        </div>
+                        <div class="subButton" id="subButton3">
+                          <button class="dropdownButton btn btn-danger" onclick="toggleDropdown(3, 1)">Select I-Pad</button>
+                          <select class="dropdown  btn btn-info" onchange="toggleMobileInput(3, 1)">
+                            <option value="" class=" btn btn-info"> Select I-Pad</option>
+                            <option value="option1">iPad</option>
+                            <option value="option2">iPad Air</option>
+                            <option value="option3">iPad Mini</option>
+                            <option value="option4">iPad Pro</option>
+                          </select>
+                          <input class="mobileInput" id="mobileInput3-1" type="text" placeholder="Enter mobile number">
+                        </div>
+                        <div class="subButton" id="subButton4">
+                          <button class="dropdownButton btn btn-danger" onclick="toggleDropdown(4, 1)">Select I-Macbook</button>
+                          <select class="dropdown btn btn-info" onchange="toggleMobileInput(4, 1)">
+                            <option value="" class=" btn btn-info">Select I-Macbook</option>
+                            <option value="option1">MacBook</option>
+                            <option value="option2">MacBook Pro Retina</option>
+                            <option value="option3">MacBook Pro</option>
+                            <option value="option4">MacBook Air</option>
+                          </select>
+                          <input class="mobileInput" id="mobileInput4-1" type="text" placeholder="Enter mobile number">
+                        </div>
+                          <input class="mobileInput" id="mobileInput4-2" type="text" placeholder="Enter mobile number">
+                        </div>
+                        <!-- Add 5 more sub_buttons for Button 2, 3, and 4 -->
+                        <!-- You can use similar pattern to add more sub_buttons for Button 2, 3, and 4 -->
+                      </div>
                 </div>
                 
             </div>
@@ -232,7 +317,12 @@
     </div>
 
 </section> 
-      
+
+<!-- buttons rate to here -->
+<section>
+    
+</section>
+      <!-- okkk -->
     <section class="container-fluid p-lg-2">
         <div class="p-lg-2 text-center" style="background-color: #FCC853;">
             <h2 class="p-lg-4 p-3">How does it work?</h2>
@@ -263,7 +353,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="d-flex align-items-center mb-4">
                         <img src="./public/images/lifetime-warranty.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3 img-rotate">
-                        <div>
+                        <div class="proparty">
                             <h4>Lifetime Warranty</h4>
                             <small>Our commitment to customer satisfaction is exemplified by our Lifetime Warranty, giving you the confidence that your device is in reliable hands.</small>
                         </div>
@@ -272,7 +362,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="d-flex align-items-center mb-4">
                         <img src="./public/images/repairs-infront.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
-                        <div>
+                        <div class="proparty">
                             <h4>Repairs Done, Right In Front Of You!</h4>
                             <small>We bring the repair service directly to you, ensuring that your device is fixed professionally and efficiently, right in front of your doorstep.</small>
                         </div>
@@ -281,7 +371,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="d-flex align-items-center mb-4">
                         <img src="./public/images/door-repair.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
-                        <div>
+                        <div class="proparty">
                             <h4>Same Day Doorstep Service</h4>
                             <small>Enjoy the convenience of our same day doorstep service, eliminating the need for you to wait or travel. Your device will be fixed without interrupting your busy schedule.</small>
                         </div>
@@ -290,7 +380,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="d-flex align-items-center mb-4">
                         <img src="./public/images/google-ratings.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
-                        <div>
+                        <div class="proparty">
                             <h4>Highest Google Ratings</h4>
                             <small>We take pride in our exceptional service, as reflected in our highest Google ratings. Our satisfied customers consistently rate us as the best in the industry</small>
                         </div>
@@ -299,7 +389,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="d-flex align-items-center mb-4">
                         <img src="./public/images/lowest-prices.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
-                        <div>
+                        <div class="proparty">
                             <h4>Lowest Prices</h4>
                             <small>At GadgetZippy, save big with our lowest prices guarantee. We believe in providing affordable solutions without compromising on the quality of our services.</small>
                         </div>
@@ -308,7 +398,7 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="d-flex align-items-center mb-4">
                         <img src="./public/images/expert-tech.svg" data-aos="flip-left" data-aos-duration="1000" alt="" class="me-3">
-                        <div>
+                        <div class="proparty">
                             <h4>Expert Technicians</h4>
                             <small>Our team of highly skilled and experienced technicians are the backbone of our service. Rest assured, your devices are in the hands of experts.</small>
                         </div>
@@ -584,29 +674,47 @@
           subButtons.forEach(function(subButton) {
             subButton.style.display = 'none';
           });
-    
+      
           var buttonId = 'subButton' + buttonNumber;
           var button = document.getElementById(buttonId);
           button.style.display = 'block';
         }
-    
+      
         function toggleDropdown(buttonNumber, subButtonNumber) {
           var dropdowns = document.querySelectorAll('.dropdown');
           dropdowns.forEach(function(dropdown) {
             dropdown.style.display = 'none';
           });
-    
+      
           var dropdownId = 'subButton' + buttonNumber;
           var dropdown = document.getElementById(dropdownId).querySelectorAll('.dropdown')[subButtonNumber - 1];
           dropdown.style.display = 'block';
+      
+          // Change background images based on dropdown selection
+          var dropdownValue = dropdown.value;
+          var body = document.getElementsByTagName('body')[0];
+      
+          if (dropdownValue === 'option1') {
+            body.style.backgroundImage = "url('./public/images/iPad-home.png')";
+          } else if (dropdownValue === 'option2') {
+            body.style.backgroundImage = "url('./public/images/iPhone-home.png')";
+          } else if (dropdownValue === 'option3') {
+            body.style.backgroundImage = "url('./public/images/iWatch-home.png')";
+          } else if (dropdownValue === 'option4') {
+            body.style.backgroundImage = "url('./public/images/iMackbook-home.png')";
+          } else if (dropdownValue === 'option5') {
+            body.style.backgroundImage = "url('./public/images/iWatch-home.png')";
+          } else {
+            body.style.backgroundImage = "./public/images/iWatch-home.png"; // Reset background image if no option selected
+          }
         }
-    
+      
         function toggleMobileInput(buttonNumber, subButtonNumber) {
           var mobileInputs = document.querySelectorAll('.mobileInput');
           mobileInputs.forEach(function(input) {
             input.style.display = 'none';
           });
-    
+      
           var inputId = 'mobileInput' + buttonNumber + '-' + subButtonNumber;
           var input = document.getElementById(inputId);
           input.style.display = 'block';

@@ -225,3 +225,8 @@ footer a{
     transform: scale(1.03);
     opacity: 1;
   }
+  .proparty h4:hover{
+    text-decoration: underline;
+    width: 100%;
+    color: rgb(133, 69, 89);
+  }

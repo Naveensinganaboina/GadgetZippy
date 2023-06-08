@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .button {
+      margin-bottom: 10px;
+    }
+    .subButton {
+      display: none;
+    }
+    .dropdown {
+      display: none;
+    }
+    .mobileInput {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button class="button" onclick="showSubButtons(1)">Button 1</button>
+  <button class="button" onclick="showSubButtons(2)">Button 2</button>
+  <button class="button" onclick="showSubButtons(3)">Button 3</button>
+  <button class="button" onclick="showSubButtons(4)">Button 4</button>
+
+  <div id="subButtonContainer">
+    <div class="subButton" id="subButton1">
+      <button class="dropdownButton" onclick="toggleDropdown(1, 1)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(1, 1)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput1-1" type="text" placeholder="Enter mobile number">
+    </div>
+    <!-- Add 5 more sub_buttons for Button 1 -->
+    <div class="subButton" id="subButton2">
+      <button class="dropdownButton" onclick="toggleDropdown(2, 1)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(2, 1)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput2-1" type="text" placeholder="Enter mobile number">
+    </div>
+    <div class="subButton" id="subButton3">
+      <button class="dropdownButton" onclick="toggleDropdown(3, 1)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(3, 1)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput3-1" type="text" placeholder="Enter mobile number">
+    </div>
+    <div class="subButton" id="subButton4">
+      <button class="dropdownButton" onclick="toggleDropdown(4, 1)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(4, 1)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput4-1" type="text" placeholder="Enter mobile number">
+    </div>
+    <div class="subButton" id="subButton5">
+      <button class="dropdownButton" onclick="toggleDropdown(1, 2)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(1, 2)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput1-2" type="text" placeholder="Enter mobile number">
+    </div>
+    <div class="subButton" id="subButton6">
+      <button class="dropdownButton" onclick="toggleDropdown(2, 2)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(2, 2)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput2-2" type="text" placeholder="Enter mobile number">
+    </div>
+    <div class="subButton" id="subButton7">
+      <button class="dropdownButton" onclick="toggleDropdown(3, 2)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(3, 2)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput3-2" type="text" placeholder="Enter mobile number">
+    </div>
+    <div class="subButton" id="subButton8">
+      <button class="dropdownButton" onclick="toggleDropdown(4, 2)">Select an option</button>
+      <select class="dropdown" onchange="toggleMobileInput(4, 2)">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+      </select>
+      <input class="mobileInput" id="mobileInput4-2" type="text" placeholder="Enter mobile number">
+    </div>
+    <!-- Add 5 more sub_buttons for Button 2, 3, and 4 -->
+    <!-- You can use similar pattern to add more sub_buttons for Button 2, 3, and 4 -->
+  </div>
+
+
+<script>
+    function showSubButtons(buttonNumber) {
+      var subButtons = document.querySelectorAll('.subButton');
+      subButtons.forEach(function(subButton) {
+        subButton.style.display = 'none';
+      });
+  
+      var buttonId = 'subButton' + buttonNumber;
+      var button = document.getElementById(buttonId);
+      button.style.display = 'block';
+    }
+  
+    function toggleDropdown(buttonNumber, subButtonNumber) {
+      var dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(function(dropdown) {
+        dropdown.style.display = 'none';
+      });
+  
+      var dropdownId = 'subButton' + buttonNumber;
+      var dropdown = document.getElementById(dropdownId).querySelectorAll('.dropdown')[subButtonNumber - 1];
+      dropdown.style.display = 'block';
+  
+      // Change background images based on dropdown selection
+      var dropdownValue = dropdown.value;
+      var body = document.getElementsByTagName('body')[0];
+  
+      if (dropdownValue === 'option1') {
+        body.style.backgroundImage = "url('./public/images/iPad-home.png')";
+      } else if (dropdownValue === 'option2') {
+        body.style.backgroundImage = "url('./public/images/iPhone-home.png')";
+      } else if (dropdownValue === 'option3') {
+        body.style.backgroundImage = "url('./public/images/iWatch-home.png')";
+      } else if (dropdownValue === 'option4') {
+        body.style.backgroundImage = "url('./public/images/iMackbook-home.png')";
+      } else if (dropdownValue === 'option5') {
+        body.style.backgroundImage = "url('./public/images/iWatch-home.png')";
+      } else {
+        body.style.backgroundImage = "./public/images/iWatch-home.png"; // Reset background image if no option selected
+      }
+    }
+  
+    function toggleMobileInput(buttonNumber, subButtonNumber) {
+      var mobileInputs = document.querySelectorAll('.mobileInput');
+      mobileInputs.forEach(function(input) {
+        input.style.display = 'none';
+      });
+  
+      var inputId = 'mobileInput' + buttonNumber + '-' + subButtonNumber;
+      var input = document.getElementById(inputId);
+      input.style.display = 'block';
+    }
+  </script>
+  
+
+
+</body>
+</html>
